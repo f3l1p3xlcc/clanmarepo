@@ -1,12 +1,47 @@
 import React from "react";
 
 class AddContact extends React.Component {
-	state = {
+	state = { 
 		nombre: "",
+		fechanacimiento: "",
+		dedicas: "",
+		etapamaternidad: "",
+		quebuscas: "",
+		sobremi: "", 
+		piensandemi: "",
+		queinteresa: "", 
+		mishijos: [
+  {"nombre":"Mary", "edad":"12", "genero":"F", "detalle":"niña inquieta"},
+  {"nombre":"John", "edad":"15", "genero":"M", "detalle":"niño inquieto"},
+  {"nombre":"David", "edad":"9", "genero":"PnD", "detalle":"especial"}],
+  
+		ubicacion: "",
+		foto1: "",
+		foto2: "",
+		fotoperfil: "",
 		email: "", 
 		contrasenha: "", 
+		texto2: '"employees":[{"nombre" : " asdf", "id" : "123", "email":"aadasdf"},{"nombre" : " asdf2", "id" : "1232", "email":"aadasdf2"}]',
 		contrasenhaconf: "", 
 	}
+	
+	estado = {
+		
+		nombreestado:"",
+		estado2:"",
+	}
+	
+	
+	/*
+	const texto1 = '{ "employees" : [' +
+			'{ "firstName":"John" , "lastName":"Doe" },' +
+			'{ "firstName":"Anna" , "lastName":"Smith" },' +
+			'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+			
+	const texto = JSON.parse(texto1);
+	*/
+	
+	
 	
 	add = (e) => {
 		e.preventDefault();
@@ -21,6 +56,10 @@ class AddContact extends React.Component {
 	}
 	
 	render(){
+		
+		const texto = ' sadfasdf';
+		
+		
 		return(
 		<div className="ui main">
 		

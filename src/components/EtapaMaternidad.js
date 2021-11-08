@@ -1,249 +1,72 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const EtapaMaternidad = () => {
-	return (
-				
-			<div style={{width:"450px"}} className="container">
-				
-				<h3 style={{color: "#ED2E5D", marginTop : "50px", marginBottom:"50px"}}>¿En qué etapa de la maternidad estás?</h3>
+class EtapaMaternidad extends React.Component {
+//const EtapaMaternidad = () => {
 	
-				<div className="textCenter">
-  
-						<div className="textCenter">
+	add = (e) => {
+		e.preventDefault();
+		console.log('add EtapaMaternidad : ');
+		this.props.history.push("/lista");
+	}
+	
+	render(){
+		console.log('render EtapaMaternidad : ');
+	return (
+			
+			<div  className="containerflex">
+			<form className="textCenter" onSubmit={this.add}>
+				<div className="text-center">			
+					<h3 style={{color: "#ED2E5D", marginTop : "50px", marginBottom:"50px"}}>
+						¿En qué etapa de la maternidad estás?
+					</h3>
+				
+			<div  className="containerflex">
+				<div  className="lista1">
+
 					
-								<button style={{
-								marginTop:"10px",
-								marginButton:"10px",
-								color: "#9D9D9D",
-								lineHeight: "15px",
-								border: "2px solid #D7D7D7",
-								borderRadius: "40px",
-								background: "transparent"}} className="btn">Aún no tengo hijos</button> 
+								<button className="button5">Aún no tengo hijos</button> 
 			  
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-								lineHeight: "15px",
-								border: "2px solid #D7D7D7",
-								borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Embarazada</button> 
+								<button className="button5">Embarazada</button> 
 							  
-							  <div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá primeriza</button>
+								<button className="button5">Mamá primeriza</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Intentando concebir</button>
+								<button className="button5">Intentando concebir</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Dificultades para concebir</button>
+								<button className="button5">Dificultades para concebir</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá adolecente</button>
+								<button className="button5">Mamá adolecente</button>
 				  
-						</div>
+								<button className="button5">Mamá de melliz@s/gemel@s</button>
+
 						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de melliz@s/gemel@s</button>
+								<button className="button5">Mamá soltera</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá soltera</button>
+								<button className="button5">Mamá de trilliz@s</button>
+								<button className="button5">Mamá de bebé arcoiris</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de trilliz@s</button>
+								<button className="button5">Mamá con mas de un padre</button>
+								<button className="button5">Mamá de bebé estrella</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de bebé arcoiris</button>
+								<button className="button5">Mamá de 2</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá con mas de un padre</button>
+								<button className="button5">Mamá de 3</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de bebé estrella</button>
+								<button className="button5">Mamá de 4</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de 2</button>
+								<button className="button5">Mamá de 5</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de 3</button>
+								<button className="button5">Mamá de 6</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de 4</button>
+								<button className="button5">Mamá con pérdida gestacional</button>
 				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de 5</button>
-				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá de 6</button>
-				  
-						</div>
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">Mamá con pérdida gestacional</button>
-				  
-						</div>
-						
-						
-						<div className="text-center">
-							  <button style={{
-							  marginTop:"10px",
-							  marginButton:"10px",
-							  color: "#9D9D9D",
-							  lineHeight: "15px",
-							  border: "2px solid #D7D7D7",
-							  borderRadius: "40px",
-							  background: "transparent"}} className="btn btn-light">No me siento representada con las opciones</button>
-				  
-						</div>
-						
-						
-						</div>
-				  
-						
-		  
+								<button className="button5">No me siento representada con las opciones</button>
+				</div>
+				</div>
 				</div>
             
 				<div className="textCenter">
-				<Link to="/lista">
+				
 					  <button style={{width:"350px",
 					  marginTop:"25px",
 					  marginButton:"10px",
@@ -254,12 +77,14 @@ const EtapaMaternidad = () => {
 					  background: "transparent"}}
 						  
 						className="btn btnLight">Continuar</button>
-				</Link>
+				
 				</div>
 		
+			</form>
 			</div>
-		  
+			
 	);
+	}
 };
 
 export default EtapaMaternidad;

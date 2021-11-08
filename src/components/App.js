@@ -9,6 +9,7 @@ import InicioSecion from "./InicioSecion";
 import Bienvenido from "./Bienvenido";
 import Registro from "./Registro";
 import CualNombre from "./CualNombre";
+import Cuantoshijos from "./Cuantoshijos";
 import EtapaMaternidad from "./EtapaMaternidad";
 import Hijos from "./Hijos";
 
@@ -17,8 +18,9 @@ import ContactDetail from './ContactDetail';
 
 function App() {
 	const LOCAL_STORAGE_KEY ="contacts";
+		
 	const [contacts, setContacts] = useState([]);
-	
+		
 	const addContactHandler =(contact) => {
 		console.log(contact);
 		setContacts([...contacts, {id:uuid(),...contact}]);
@@ -42,7 +44,7 @@ function App() {
 	},[contacts]);
 	
   return (
-    <div className="ui container">
+    <div className="App">
 		<Router>
 		{/*<Header />*/}
 			<Switch>
@@ -60,21 +62,48 @@ function App() {
 				
 				<Route path="/Bienvenido" 
 				exact 
-				render={()=>(<Bienvenido/>
+				render={(props)=>(<Bienvenido 
+					{...props} 
+					contacts={contacts} 
+					getContactId={removeContactHandler}
+				/>
+				)}
+				/>
+				
+				<Route path="/lista" 
+				exact 
+				render={(props)=>(<ContactList 
+					{...props} 
+					contacts={contacts} 
+					getContactId={removeContactHandler}
+				/>
 				)}
 				/>
 				
 				
-				
 				<Route path="/cualnombre" 
 				exact 
-				render={()=>(<CualNombre/>
+				render={(props)=>(<CualNombre
+				{...props}
+				contacts={contacts} 
+				getContactId={removeContactHandler}
+				/>
+				)}
+				/>
+
+				<Route path="/cuantoshijos" 
+				exact 
+				render={()=>(<Cuantoshijos/>
 				)}
 				/>
 				
 				<Route path="/etapamaternidad" 
 				exact 
-				render={()=>(<EtapaMaternidad/>
+				render={(props)=>(<EtapaMaternidad
+				{...props}
+				contacts={contacts} 
+				getContactId={removeContactHandler}
+				/>
 				)}
 				/>
 				
@@ -90,15 +119,7 @@ function App() {
 				)}
 				/>
 				
-				<Route path="/lista" 
-				exact 
-				render={(props)=>(<ContactList 
-					{...props} 
-					contacts={contacts} 
-					getContactId={removeContactHandler}
-				/>
-				)}
-				/>
+				
 				
 				<Route 
 				path="/agregar" 

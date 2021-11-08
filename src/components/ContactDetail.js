@@ -19,37 +19,31 @@ const ContactDetail =(props) => {
 			<div className="textCenter">
 				<img style={{width: "100vw", height: "10vh"}} src={imgheader1} className="image" alt="" />
 				<img style={{height:"15vh", marginTop: "-7vh", marginBottom:"7vh"}}  src={imgheader2} className="image" alt="" />
-				
-				<div className="width">
-				  <div className="row">
-					<div className="col-ms">
-					
-					  <div className="Ltext"><h1>Mi Perfil</h1>
-					  </div>   
-					</div>
-					
-					<div className="col edit" >
-						<img  src={imgheader3} className="image" alt="" />
-						Editar Perfil
-					</div>
-					
-					<div className="col-ms">
-                  <div className="config">
+      </div>
+				<div className="width1">
+					<div style={{width: "80%", display:"flex"}}  className="Ltext">
+            Mi Perfil
+            <div className=" edit" >
+						  <img  src={imgheader3} className="image" alt="" />
+						  Editar Perfil
+					  </div>
+					</div>   
+					<div style={{width: "20%",textAlign:"right"}}>
+					  <div  className="config">
                     <img  src={imgheader4} className="image" alt="" />
-                  </div>
-                </div>
+            </div>
+          </div>
 				
-				  </div>
 				</div>   
-			</div>
+
 			
 			<div className="mamáperf" >
-				<img  style={{width: "50vw", height: "50vh"}} src={mama} className="image" alt="" />
-				<img  src={border6} className="image" alt="" />
+				<img  src={mama} className="foto" alt="" />
+				<img  src={border6} className="base" alt="" />
 				
            
 				<div className="editfoto">
-					<img  src={imgheader5} className="image" alt="" />	
+					<img  src={imgheader5}  alt="" />	
 					Cambiar foto de perfil
 				</div>
 			</div>
@@ -73,11 +67,11 @@ const ContactDetail =(props) => {
               Ingeniera
             </div>
            </div>
-           <div className="row">
-            <div className="col Ctext1">
+           
+            <div className=" Ctext1">
               Santiago, Chile
             </div>
-          </div>  
+           
         </div>  
 		
 		<div className="intereses">
@@ -113,16 +107,13 @@ const ContactDetail =(props) => {
             <button className="button3">Alegre</button>
             <button className="button3">Hogareña</button>
             <button className="button3">Artística</button>
+            <button className="button3">Alegre</button>
+            <button className="button3">Hogareña</button>
+            
           </div>
           </div>
-		
-		
 		
 	</div>
-		  
-		  
-		  
-		  
 		
 );
 };

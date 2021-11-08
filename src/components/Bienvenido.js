@@ -4,12 +4,9 @@ import {Link} from 'react-router-dom';
 import imgheader1 from '../images/borde.png';
 import imgheader2 from '../images/2.png';
 
-const Inicio = () => {
+const Inicio = (props) => {
 	return (
-	
 
-		
-		
 		<div className="main">
 		
 				<div className="app1">
@@ -42,13 +39,7 @@ const Inicio = () => {
 							<button className="button1">Aceptar</button>
 							</Link>
 						</div>
-       
-
 					</div>
-		  
-		  
-				
-          
 				</div>
 				
 		</div>

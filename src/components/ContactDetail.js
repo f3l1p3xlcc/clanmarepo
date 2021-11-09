@@ -53,7 +53,7 @@ const ContactDetail =(props) => {
           <div className="row">
             <div className="col">
               <div className="Ctext2">
-			  <h1><div className="header">{email}</div></h1>
+			  <h1><div className="header">{nombre}</div></h1>
 			  
 						
               </div>

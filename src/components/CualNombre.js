@@ -7,7 +7,7 @@ class CualNombre extends React.Component {
 	add = (e) => {
 		
 		e.preventDefault();
-		console.log('CualNombre : ');
+		console.log('CualNombre : ', this.state.nombre);
 		
 		var retriveContacts = JSON.parse(localStorage.getItem("contacts"));
 		console.log(" retriveContacts add", retriveContacts);
@@ -18,7 +18,7 @@ class CualNombre extends React.Component {
 			'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 		
 		let textojson = ' { "id": "78811069-fcee-4025-9f4d-6f6cd94a0f03", '+
-						' "nombre": "nombre nuevo", '+
+						' "nombre": " '+ this.state.nombre +'", '+
 						' "fechanacimiento": "", '+
 						' "dedicas": "", '+
 						' "etapamaternidad": "", '+
@@ -27,9 +27,11 @@ class CualNombre extends React.Component {
 						' "piensandemi": "", '+
 						' "queinteresa": ""} '
 		
+		
+		
 		const texto_fsda = JSON.parse(textojson);
 		
-		retriveContacts[0] = texto_fsda;
+		retriveContacts[retriveContacts.length - 1] = texto_fsda;
 		
 		localStorage.setItem("contacts",JSON.stringify(retriveContacts));
 		
@@ -93,7 +95,8 @@ class CualNombre extends React.Component {
 		<form className="textCenter" onSubmit={this.add}>
 			<h3 style={{color: "#ED2E5D", marginTop : "150px", marginBottom:"50px"}}>¿Cuál es tu nombre?</h3>
 			<div className="formGroup">
-				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Juanita Perez"/>
+				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Juanita Perez"
+				 onChange={( e )=> this.setState({nombre: e.target.value})}/>
 			</div>
   
 		

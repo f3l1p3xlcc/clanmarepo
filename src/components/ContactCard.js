@@ -12,7 +12,7 @@ const ContactCard =(props) => {
 				<div className="content">
 				<Link to={{pathname: '/contact/${id}', state:{contact:props.contact}}}>
 					<div className="header">{nombre}</div>
-					<div>{email}</div>
+					
 				</Link>
 				</div>
 				

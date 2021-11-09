@@ -7,6 +7,10 @@ class EtapaMaternidad extends React.Component {
 	add = (e) => {
 		e.preventDefault();
 		console.log('add EtapaMaternidad : ');
+		
+		var retriveContacts = JSON.parse(localStorage.getItem("contacts"));
+		console.log(" retriveContacts add", retriveContacts);
+		
 		this.props.history.push("/lista");
 	}
 	
@@ -26,7 +30,9 @@ class EtapaMaternidad extends React.Component {
 
 					
 								<button className="button5">Aún no tengo hijos</button> 
-			  
+								
+								<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+								
 								<button className="button5">Embarazada</button> 
 							  
 								<button className="button5">Mamá primeriza</button>

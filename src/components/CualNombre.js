@@ -19,8 +19,9 @@ class CualNombre extends React.Component {
 		
 		let textojson = ' { "id": "78811069-fcee-4025-9f4d-6f6cd94a0f03", '+
 						' "nombre": " '+ this.state.nombre +'", '+
-						' "fechanacimiento": "", '+
-						' "dedicas": "", '+
+						' "edadA": " '+ this.state.edadA +'", '+
+						' "dedicas": " '+ this.state.dedicas +'", '+
+						' "ubicacion": " '+ this.state.ubicacion +'", '+
 						' "etapamaternidad": "", '+
 						' "quebuscas": "", '+
 						' "sobremi": "", ' +
@@ -91,24 +92,39 @@ class CualNombre extends React.Component {
 		
 	return (		
 		
-  <div style={{width:"350px"}} className="container">
-		<form className="textCenter" onSubmit={this.add}>
-			<h3 style={{color: "#ED2E5D", marginTop : "150px", marginBottom:"50px"}}>¿Cuál es tu nombre?</h3>
+  <div style={{overflowY:"scroll"}} className="containerflow">
+		<form style={{overflowY:"hidden"}} className="textCenter" onSubmit={this.add}>
+			<h3 style={{color: "#ED2E5D", marginTop : "10vh", marginBottom:"10vh"}}>¿Cuál es tu nombre?</h3>
 			<div className="formGroup">
 				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Juanita Perez"
 				 onChange={( e )=> this.setState({nombre: e.target.value})}/>
 			</div>
+			<h3 style={{color: "#ED2E5D", marginTop : "10vh", marginBottom:"10vh"}}>¿Cuál es tu edad?</h3>
+			<div className="formGroup">
+				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="edad"
+				 onChange={( e )=> this.setState({edadA: e.target.value})}/>
+			</div>
+			<h3 style={{color: "#ED2E5D", marginTop : "10vh", marginBottom:"10vh"}}>¿A qué te dedicas?</h3>
+			<div className="formGroup">
+				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ocupación"
+				 onChange={( e )=> this.setState({dedicas: e.target.value})}/>
+			</div>
+			<h3 style={{color: "#ED2E5D", marginTop : "10vh", marginBottom:"10vh"}}>¿Dónde vives?</h3>
+			<div className="formGroup">
+				<input type="text" className="borderBottom formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ubicación"
+				 onChange={( e )=> this.setState({ubicacion: e.target.value})}/>
+			</div>
   
 		
 		<button style={{width:"350px",
-		marginTop: "125px",
+		marginTop: "10vh",
 		color: "#9D9D9D",
-		lineHeight: "15px",
+		lineHeight: "10vh",
 		border: "2px solid #D7D7D7",
-		borderRadius: "40px",
+		borderRadius: "3vh",
 		background: "transparent",
 		transition: "all 0.3s ease 0s",
-		marginTop: "125px"}}
+		marginTop: "10vh"}}
 		type="submit" className="btn btnDanger">Continuar</button>
 		
 			</form>

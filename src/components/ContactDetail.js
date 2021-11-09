@@ -11,7 +11,7 @@ import mama from '../images/Mama6.jpg';
 import border6 from '../images/borde3.png';	
 
 const ContactDetail =(props) => {
-	const {nombre, email} = props.location.state.contact;
+	const {nombre, edadA, dedicas, email, ubicacion} = props.location.state.contact;
 	console.log(props);
 	return(
 	
@@ -61,15 +61,15 @@ const ContactDetail =(props) => {
           </div>
             <div className="row">
             <div className="col Rtext1" >
-              30 años
+              {edadA} años
           </div>
             <div className="col Ltext1">
-              Ingeniera
+              {dedicas}
             </div>
            </div>
            
             <div className=" Ctext1">
-              Santiago, Chile
+              {ubicacion}
             </div>
            
         </div>  
